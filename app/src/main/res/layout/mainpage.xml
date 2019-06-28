@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainPage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/etGyro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/etMagnetic"
+            android:layout_below="@id/etGyro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/etLinearAcc"
+            android:layout_below="@id/etMagnetic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/Azimuth"
+            android:layout_below="@id/etLinearAcc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/Pitch"
+            android:layout_below="@id/Azimuth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/Roll"
+            android:layout_below="@id/Pitch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bn1"
+            android:layout_below="@id/Roll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start"/>
+
+        <Button
+            android:id="@+id/bn2"
+            android:layout_below="@id/bn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="stop" />
+
+        <Button
+            android:id="@+id/bn3"
+            android:layout_below="@id/bn2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please Enter File Name：" />
+
+        <EditText
+            android:id="@+id/ip"
+            android:layout_below="@id/bn3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Please Enter the IP address"/>
+
+
+        <Spinner
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:id="@+id/startpoint"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/ip"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/startpoint"
+            android:id="@+id/rl"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="40dp"
+                android:text="X:"
+                android:layout_marginRight="5dp"
+                android:textSize="20dp"
+                android:id="@+id/x"/>
+
+            <EditText
+                android:id="@+id/xcood"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:hint="please enter x"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/x" />
+
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="40dp"
+                android:text="Y:      "
+                android:textSize="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_toRightOf="@+id/xcood"
+                android:id="@+id/y"/>
+
+            <EditText
+                android:id="@+id/ycood"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:inputType="number"
+                android:hint="please enter y"
+                android:layout_toRightOf="@+id/y"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Confirm"
+                android:layout_toRightOf="@+id/ycood"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/confirm"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/xygroup"
+            android:layout_below="@id/rl">
+
+            <EditText
+                android:id="@+id/xygroupjson"
+                android:layout_width="320dp"
+                android:layout_height="80dp"
+                android:hint="please enter x,y group" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:text="Confirm"
+                android:layout_toRightOf="@+id/xygroupjson"
+                android:layout_alignParentRight="true"
+                android:id="@+id/xygroupconfirm"/>
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/xygroup"
+            android:id="@+id/request_plot"
+            android:text="It will request 172.29.79.163/start"/>
+
+        <ImageView
+            android:id="@+id/floorplan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/durham"
+            android:layout_below="@+id/request_plot"
+            android:scaleType="fitCenter"/>
+
+        <EditText
+            android:layout_marginTop="50sp"
+            android:layout_below="@id/floorplan"
+            android:id="@+id/url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/httpConnect"
+            android:layout_below="@id/url"
+            android:text="Http Test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/JsonDisplay"
+            android:layout_below="@id/httpConnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+</ScrollView>

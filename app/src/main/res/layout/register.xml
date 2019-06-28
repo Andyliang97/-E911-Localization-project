@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Register"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/title"
+        android:textSize="40dp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_action_user"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="textPersonName"
+        android:textSize="16dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/title"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_action_pass"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/username"
+        android:layout_alignLeft="@+id/username"
+        android:layout_alignStart="@+id/username" />
+
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:background="#11000000"
+        android:drawableLeft="@drawable/ic_action_weight"
+        android:ems="10"
+        android:inputType="number"
+        android:hint="Height"
+        android:textSize="16dp"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true" />
+
+    <Spinner
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:id="@+id/gender"
+        android:layout_below="@id/height"
+        android:layout_centerHorizontal="true"
+        android:drawableLeft="@drawable/ic_action_height"
+        android:layout_marginBottom="50dp"/>
+
+    <Spinner
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:id="@+id/startpoint"
+        android:layout_below="@id/gender"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="18dp"
+        android:layout_below="@+id/startpoint"
+        android:layout_centerHorizontal="true"
+        android:text="Submit"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:background="@color/colorAccent"
+        android:id="@+id/submit"/>
+
+</RelativeLayout>
