@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient"
-    tools:context=".RegisterActivity">
+    tools:context=".RegisterPage">
 
     <TextView
         android:layout_width="wrap_content"
@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:id="@+id/title"
         android:textSize="40dp"
-        android:textColor="@color/colorPrimaryDark"/>
+        android:textColor="#FFFFFF"/>
 
     <EditText
         android:id="@+id/username"
@@ -25,9 +25,10 @@
         android:drawableLeft="@drawable/ic_action_user"
         android:ems="10"
         android:hint="Username"
+        android:textColorHint="#FFFFFF"
         android:inputType="textPersonName"
         android:textSize="16dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="30dp"
         android:layout_marginTop="40dp"
         android:layout_below="@+id/title"
         android:layout_centerHorizontal="true" />
@@ -40,8 +41,9 @@
         android:drawableLeft="@drawable/ic_action_pass"
         android:ems="10"
         android:hint="Password"
+        android:textColorHint="#FFFFFF"
         android:inputType="textPassword"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="30dp"
         android:layout_below="@+id/username"
         android:layout_alignLeft="@+id/username"
         android:layout_alignStart="@+id/username" />
@@ -55,8 +57,9 @@
         android:ems="10"
         android:inputType="number"
         android:hint="Height"
+        android:textColorHint="#FFFFFF"
         android:textSize="16dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="30dp"
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true" />
 
@@ -67,21 +70,15 @@
         android:layout_below="@id/height"
         android:layout_centerHorizontal="true"
         android:drawableLeft="@drawable/ic_action_height"
-        android:layout_marginBottom="50dp"/>
+        android:layout_marginBottom="130dp"/>
 
-    <Spinner
-        android:layout_width="250dp"
-        android:layout_height="40dp"
-        android:id="@+id/startpoint"
-        android:layout_below="@id/gender"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"/>
+
 
     <Button
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginBottom="18dp"
-        android:layout_below="@+id/startpoint"
+        android:layout_below="@+id/gender"
         android:layout_centerHorizontal="true"
         android:text="Submit"
         android:textColor="#fff"

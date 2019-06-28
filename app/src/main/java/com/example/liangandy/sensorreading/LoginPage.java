@@ -17,7 +17,7 @@ import java.io.InputStreamReader;
 import java.io.Serializable;
 import java.util.HashMap;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginPage extends AppCompatActivity {
 
     public static final int REGISTER_CODE = 1;
     private EditText username;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.login_page);
+        setContentView(R.layout.loginpage);
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
         login = findViewById(R.id.login);
@@ -52,11 +52,11 @@ public class MainActivity extends AppCompatActivity {
                         openMainPage();
                     }
                     else{
-                        Toast.makeText(MainActivity.this, "Wrong Username or Password", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(LoginPage.this, "Wrong Username or Password", Toast.LENGTH_SHORT).show();
                     }
                 }
                 else{
-                    Toast.makeText(MainActivity.this, "No user found!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginPage.this, "No user found!", Toast.LENGTH_SHORT).show();
                 }
 
             }
@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
      * if the Register button is clicked. Open register activity
      */
     private void openRegister(){
-        Intent intent = new Intent(this ,RegisterActivity.class);
+        Intent intent = new Intent(this , RegisterPage.class);
         intent.putExtra("hashmap",(Serializable) hashmap);
         startActivityForResult(intent, REGISTER_CODE);
     }

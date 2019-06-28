@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class RegisterActivity extends AppCompatActivity {
+public class RegisterPage extends AppCompatActivity {
 
     /**
      * EditText for username, password and height
@@ -147,7 +147,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if (usernameString.trim().length() >0 && passwordString.trim().length() >0
                 && heightString.trim().length() >0 && genderChoice.trim().length() >0){
                     if (hashmap.containsKey(usernameString)){
-                        Toast.makeText(RegisterActivity.this, "Duplicate Username", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(RegisterPage.this, "Duplicate Username", Toast.LENGTH_SHORT).show();
                     }
                     else{
                         hashmap.put(usernameString,new String[]{passwordString, heightString, genderChoice});
@@ -176,7 +176,7 @@ public class RegisterActivity extends AppCompatActivity {
                     }
                 }
                 else{
-                    Toast.makeText(RegisterActivity.this, "Empty Field!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterPage.this, "Empty Field!", Toast.LENGTH_SHORT).show();
                 }
             }
         });

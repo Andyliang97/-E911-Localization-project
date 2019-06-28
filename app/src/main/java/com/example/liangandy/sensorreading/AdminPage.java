@@ -12,14 +12,17 @@ public class AdminPage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_admin_page);
+        setContentView(R.layout.adminpage);
         infoDisplay = findViewById(R.id.userinfo);
         hashmap = (HashMap<String, String[]>) getIntent().getSerializableExtra("hashmap");
 
+        /**
+         * go through the hashmap and display every account in it
+         */
         for (String name: hashmap.keySet()){
             String key = "Username:" + name +"\n";
             String[] value = hashmap.get(name);
-            String output = key + "height:" + value[1] + "\tgender:" + value[2] + "\tStarting point:" + value[3] +"\n\n";
+            String output = key + "height:" + value[1] + "\t\tgender:" + value[2] +"\n\n";
             infoDisplay.append(output);
         }
     }
